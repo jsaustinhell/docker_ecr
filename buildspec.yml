@@ -20,6 +20,7 @@ phases:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker images...
+      - docker tag tet:latest 226219512882.dkr.ecr.eu-west-2.amazonaws.com/tet:latest
       - docker push 226219512882.dkr.ecr.eu-west-2.amazonaws.com/tet:latest
       - echo Writing image definitions file...
       - cat imagedefinitions.json 
